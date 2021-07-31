@@ -1,0 +1,11 @@
+.panel-primary {
+    width: 60%;height: 60%; background-color: aqua;
+    margin-top: 10%;
+    margin-left: 20%;
+}
+.b_blank {
+    padding-top: 10%;
+}
+body{
+    background-color: darkgray;
+}

@@ -1,0 +1,10 @@
+<div>
+    <h3>遊戲回合 : {{ whoPlay }}</h3>
+</div>
+<div class="container" *ngFor="let item of board">
+    <div>
+        <img *ngFor="let pos of item" [alt]="pos[0]" [src]="'assets/'+ getChessManImg(pos) +'.jpg'"
+            (click)="clickChessMan($event.target)">
+
+    </div>
+</div>

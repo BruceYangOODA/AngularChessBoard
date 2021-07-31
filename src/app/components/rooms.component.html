@@ -1,0 +1,27 @@
+<div class="panle panle-primar" style="width: 300px;">
+    <div class="panel-heading text-center">
+        <div>
+            <h1>棋局列表</h1>
+            <div>
+            <label>玩家名稱</label>
+            <input type="text" (keyup)="playerOnKey($event)" (blur)="playerBlur($event)">
+        </div>
+        </div>
+    </div>
+    <div class="panel-body text-center">
+        <div class="row" *ngFor="let item of data" [class.balckBG]="item.gameStart" style="height: 60px;">
+            <div class="col text-center">
+                <h3>{{item.room}}</h3>
+            </div>
+            <button class="btn btn-primary pull-right" [mat-dialog-close]="result"
+                (click)="roomSelect(item)">加入</button>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <div class="row text-center">
+            <div class="col">
+                <button class="btn btn-secondary" (click)="onCloseClick()" style="margin-top: 20px;">取消</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="row text-center">
+    <div class="col">
+        <h1 mat-dialog-title>創建棋局</h1>
+    </div>
+</div>
+<div mat-dialog-content class="text-center">  
+    <div>
+        玩家名稱
+    </div>
+    <div>
+        <input type="text" (keyup)="playerNameOnKey($event)" (blur)="playerNameBlur($event)"/>
+    </div>
+    <div>
+        房間代號
+    </div>
+    <div>
+        <input type="text" (keyup)="roomNameOnKey($event)" (blur)="roomNameBlur($event)"/>
+    </div>
+    <div>
+        黑子白子
+    </div>
+    <div>
+        <label class="radio-inline">黑子</label>
+        <input type="radio" name="blackorwhite" value="1" checked="true" (change)="handleChange($event)"/>
+        <label class="radio-inline" style="margin-left: 40px;" >白子</label>
+        <input type="radio" name="blackorwhite" value="2" (change)="handleChange($event)"/>        
+    </div>
+</div>
+<div mat-dialog-actions class="row text-center">
+    <div class="col">
+  <button (click)="onCreateClick()" [mat-dialog-close]="data">創建</button>  
+  <button (click)="onCloseClick()" style="margin-left: 40px;">取消</button>
+</div>
+</div>
